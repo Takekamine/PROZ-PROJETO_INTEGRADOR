@@ -3,49 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
     <title>Cine Oficina</title>
 </head>
-<body>
-    <img src="img/Cine Oficina Preto.png" width=200 lenght="200" alt="Logo">    
-    <header>
+<body>    
+    <header class="cabecalho">
+        <img src="/html/img/Cine Oficina Preto.png" width=200 lenght="200" alt="Logo">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="ingressos.html">Filmes</a></li>
                 <li><a href="oficinas.html">Oficinas</a></li>
-                <li><a href="analises.html">Análises</a></li>
-                <li><a href="foruns.html">Forúns</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
             </ul>
         </nav>
+        <a href="./login.html">
+            <button class="cabecalho-botao">Login</button>
+        </a>
     </header>
     
-    <main>
+    <main class="index-corpo">
         <section>
             <h1>Filmes em Cartaz</h1>
-            <ul>
-                <li>
+            <ul class ="index-slide">
+                <li class="index-slide-li-filmes">
+                    <input type="radio" id="slide-filmes1" name="slide-filmes" checked>
+                    <label for="slide-filmes1"></label>
                     <img src="img/o_protetor.png" alt="O Protetor">
+                    <p><br>O PROTETOR: CAPÍTULO FINAL<br>
+                    <br>Desde que desistiu de sua vida como assassino trabalhando para o governo,
+                     Robert McCall (Denzel Washington) tem dificuldades para se reconciliar com as coisas horríveis que fez em seu passado,
+                      e encontra um estranho conforto em trazer à justiça aos oprimidos. Após encontrar um lar inesperado no sul da Itália,
+                       ele descobre que seus novos amigos vivem sob o controle dos chefes do crime organizado do local. 
+                       Assim que os eventos se desdobram para acontecimentos mortais, McCall sabe o que precisa fazer: 
+                       se tornar um protetor para seus amigos e enfrentar a máfia.</p>
                 </li>
-                <li>
+                <li class="index-slide-li-filmes">
+                    <input type="radio" id="slide-filmes2" name="slide-filmes">
+                    <label for="slide-filmes2"></label>
                     <img src="img/jogos-mortais-x.jpg" alt="Jogos Mortais">
+                    <p><br>JOGOS MORTAIS X<br>
+                        <br>John Kramer sempre lutou contra o câncer implacável que o aflige. Quando descobre 
+                        uma médica (Synnove Macody Lund) como verdadeira chance de sua sobrevivência, ela 
+                        viaja para o México para iniciar o tratamento. Lá, ele conhece a doutora, a equipe 
+                        e uma paciente curada. Para sua surpresa, tudo não passava de um golpe. Agora, 
+                        aqueles que brincaram com sua vida experimentarão o jogo de vingança de um homem 
+                        acostumado a brincar com a morte. Sequência número 10 da série de filmes de sucesso, 
+                        criada por James Wan, iniciada com Jogos Mortais (2004).</p>
                 </li>
-                <li>
+                <li class="index-slide-li-filmes">
+                    <input type="radio" id="slide-filmes3" name="slide-filmes">
+                    <label for="slide-filmes3"></label>
                     <img src="img/nosso-sonho.jpg" alt="Nosso Sonho">
+                    <p><br>NOSSO SONHO<br>
+                        <br>Desde a infância, Claudinho (Lucas Penteado) alimentava um sonho. Após convencer
+                         Buchecha (Juan Paiva) a formar uma dupla de MCs, eles iniciaram uma trajetória de 
+                         sucesso movida a esperança e simpatia na busca pelo sucesso. Das inúmeras apresentações
+                          de começo de carreira em bailes até o primeiro hit na rádio, a vida deles e familiares 
+                          passou por muitas mudanças. Essa é a história de Claudinho e Buchecha, os carismáticos 
+                          cantores que, sem falar de drogas e armas, ou difamar as mulheres, mudaram a relação do Brasil
+                           com o funk carioca e figuram até hoje entre os maiores vendedores de CDs do gênero.</p>
                 </li>
             </ul>
         </section>
         <section>
             <h1>Oficinas</h1>
-            <ul>
-                <li>
+            <ul class="index-slide">
+                <li class="index-slide-li-oficinas">
+                    <input type="radio" id="slide-oficinas1" name="slide-oficinas" checked>
+                    <label for="slide-oficinas1"></label>
                     <img src="img/oficina_modelagem.jpg" width=250 lenght=250 alt="Oficina modelagem">
+                    <p><br>OFICINA DE MODELAGEM<br>
+                        <br>Oficina</p>
                 </li>
-                <li>
+                <li class="index-slide-li-oficinas">
+                    <input type="radio" id="slide-oficinas2" name="slide-oficinas">
+                    <label for="slide-oficinas2"></label>
                     <img src="img/oficina_teatro.jpg" width=250 lenght=250 alt="Oficina teatro">
+                    <p><br>OFICINA DE TEATRO<br>
+                        <br>Oficina</p>
                 </li>
-                <li>
+                <li class="index-slide-li-oficinas">
+                    <input type="radio" id="slide-oficinas3" name="slide-oficinas">
+                    <label for="slide-oficinas3"></label>
                     <img src="img/oficina_teatro2.jpg" width=250 lenght=250 alt="Oficina teatro 2">
+                    <p><br>OFICINA DE TEATRO - JUVENIL<br>
+                        <br>Oficina</p>
                 </li>
             </ul>
         </section>        
