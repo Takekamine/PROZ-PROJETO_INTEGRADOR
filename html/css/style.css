@@ -456,6 +456,65 @@
     margin-top: 1rem;
   }
   
+/* ---------------------------------------- login ---------------------------------------- */
+
+.login-corpo {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 100px 0px 100px;
+    background-color: #EDEDED;
+}
+
+.login-corpo h2{
+    margin-top: 10px;
+}
+
+.login-corpo section{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    background-color: #171717;
+    color: #DA0037;
+    align-items: center;
+}
+
+.login-corpo section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+.login-corpo section label {
+    margin-bottom: .2rem;
+    position: relative;
+  }
+  
+.login-corpo section input {
+    padding: .2rem .5rem;
+  }
+  
+.btn-login {
+    width: 100px;
+    height: 40px;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    align-self: center;
+    border: #000000;
+    color: #171717;
+    background-color: #DA0037;
+}
+.login-corpo section form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: #171717;
+    border-radius: 16px;
+    padding: 1.5rem 40px;
+  }
+
+  .login-corpo section label:not(:first-of-type) {
+    margin-top: 1rem;
+  }
+  
 
 /* ---------------------------------------- footer ---------------------------------------- */
 footer {
