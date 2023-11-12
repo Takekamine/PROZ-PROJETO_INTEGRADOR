@@ -398,6 +398,29 @@
     margin-top: 1rem;
   }
   
+/* ---------------------------------------- sobre ---------------------------------------- */
+
+ .sobre-corpo {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 100px 0px 100px;
+    background-color: #EDEDED;
+}
+
+.sobre-corpo h2{
+    margin-top: 10px;
+}
+
+.sobre-corpo section{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px;
+    margin-bottom: 100px;
+    background-color: #171717;
+    color: #DA0037;
+    align-items: center;
+}
+
 
 
 /* ---------------------------------------- footer ---------------------------------------- */
