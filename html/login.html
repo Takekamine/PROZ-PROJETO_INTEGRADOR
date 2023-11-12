@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cine Oficina/Sobre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <title>Cine Oficina/Login</title>
 </head>
 <body>
     <header class="cabecalho">
@@ -26,23 +30,19 @@
         </div>
     </header>
     
-    <main>
+    <main class="login-corpo">
         <section>
             <h2>Login de Usuário</h2>
-        <form action="processar_login" method="post">
-
-        <label for="email">E-mail:</label>
-        <input type="email" name="email" required><br>
-
-        <label for="senha">Senha:</label>
-        <input type="password" name="senha" required><br>
-
-        <input type="submit" value="Login">
-    </form>
+            <form action="">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+            
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha">
+            
+                <button type="submit" class="btn-login">Login</button>
+              </form>
         </section>
-        <br>
-        <br>
-
     </main>
 
     <footer>
