@@ -3,42 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
     <title>Cine Oficina/Oficinas</title>
 </head>
 <body>
-    <img src="img/Cine Oficina Preto.png" width=200 lenght="200" alt="Logo">    
-    <header>
+<header class="cabecalho">
+        <img src="/html/img/Cine Oficina Preto.png" width=200 lenght="200" alt="Logo">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="ingressos.html">Filmes</a></li>
                 <li><a href="oficinas.html">Oficinas</a></li>
-                <li><a href="analises.html">Análises</a></li>
-                <li><a href="foruns.html">Forúns</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
             </ul>
         </nav>
-    </header>
+        <div>
+        <a href="./cadastro.html">
+            <button class="cabecalho-botao">Cadastre-se</button>
+        </a>
+        <a href="./login.html">
+            <button class="cabecalho-botao">Login</button>
+        </a>
+        </div>
+</header>
     
-    <main>
-        <section>
+    <main class="oficinas-corpo">
+        <section >
             <h1>Oficinas disponiveis</h1>
-            <section>
-                <img src="img/oficinas_culturais.png" width=250 lenght=250 alt="Oficinas culturais">
-            </section>
-            <section>
-                <img src="img/oficina_teatro.jpg" width=250 lenght=250 alt="Oficina teatro">
-            </section>
-            <section>
-                <img src="img/oficina_teatro2.jpg" width=250 lenght=250 alt="Oficina teatro 2">
-            </section>
-            <section>
-                <img src="img/oficinas_pintura.jpg" width=250 lenght=250 alt="Oficina pintura">
-            </section>
-            <section>
-                <img src="img/oficina_modelagem.jpg" width=250 lenght=250 alt="Oficina modelagem">
-            </section>
-        </section>
+            <div class="oficinas-bloco">
+                <div class="oficinas-bloco-card">
+                    <img src="img/oficina_teatro.jpg" width=250 lenght=250 alt="Oficina teatro">
+                    <div class="oficinas-bloco-card-texto">
+                        <h4>Oficina de teatro</h4>
+                        <p>A oficina de teatro oferece um ambiente acolhedor para explorar a expressão artística e desenvolver habilidades de atuação. Uma experiência enriquecedora que estimula a criatividade e promove a comunicação eficaz através da linguagem teatral.</p>
+                        <a href "#oficinas-agendamento">
+                            <button class="btn-agendar-oficinas">Agendar</button>
+                        </a>
+                    </div>          
+                </div>
+                <div class="oficinas-bloco-card">
+                    <img src="img/oficina_modelagem.jpg" width=250 lenght=250 alt="Oficina modelagem">
+                    <div class="oficinas-bloco-card-texto">
+                        <h4>Oficina de modelagem</h4>
+                        <p>Na oficina de modelagem, os participantes mergulham em uma experiência prática para desenvolver habilidades essenciais na criação de modelos que compõem cenários. Guiados por instrutores, exploram técnicas, aprendendo a dar forma a ideias e conceitos de maneira visualmente impactante.</p>
+                        <a href "#oficinas-agendamento">
+                            <button class="btn-agendar-oficinas">Agendar</button>
+                        </a>
+                    </div>          
+                </div>
+                <div class="oficinas-bloco-card">
+                    <img src="img/oficina_maquiagem.jpg" width=250 lenght=250 alt="Oficina maquiagem">
+                    <div class="oficinas-bloco-card-texto">
+                        <h4>Oficina de maquiagem artística</h4>
+                        <p>Na oficina de maquiagem artística, os participantes desvendam o mundo da expressão criativa através da maquiagem. Exploram técnicas para transformar rostos em obras de arte, aprendendo desde a aplicação básica até efeitos mais elaborados.</p>
+                        <a href "#oficinas-agendamento">
+                            <button class="btn-agendar-oficinas">Agendar</button>
+                        </a>
+                    </div>          
+                </div>
+               
 
     </main>
 
