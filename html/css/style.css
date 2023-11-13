@@ -326,6 +326,12 @@
     color: #EDEDED;
 }
 
+.btn-agendar{
+    border: #000000;
+    color: #171717;
+    background-color: #DA0037;
+}
+
 /*Pagina Oficinas*/
 .oficinas-corpo {
     display: flex;
