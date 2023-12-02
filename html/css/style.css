@@ -42,21 +42,13 @@
     display: flex;
     flex-direction: column;
     padding: 100px 100px 0px 100px;
-    background-color: #EDEDED;
+    background-color:#171717;
 }
 
 .index-corpo section {
     background-color: #171717;
     margin-bottom: 100px;
-    color: #DA0037;
-}
-
-@media (max-width: 1024px){
-    .index-corpo section{
-        display: flex;
-        flex-direction: column;
-        height:max-content;
-    }
+    color: #EDEDED;
 }
 
 .index-corpo section h1 {
@@ -75,27 +67,11 @@
     background-color: #171717;
 }
 
-@media (max-width: 1024px){
-    .index-slide{
-        display: flex;
-        height: 1200px
-    }
-}
-
 .index-slide-li-filmes {
     display: flex;
     justify-content: space-between;
     list-style: none;
     position: absolute;
-}
-
-@media (max-width: 1024px){
-    .index-slide-li-filmes{
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        position: absolute;
-    }
 }
 
 .index-slide-li-oficinas{
@@ -125,7 +101,6 @@
     visibility: hidden;
 }
 
-
 .index-slide input {
     display: none;
 }
@@ -151,18 +126,6 @@
 
 .index-slide li:nth-child(3) label {
     left: 70px;
-}
-
-.index-slide li:nth-child(4) label {
-    left: 100px;
-}
-
-.index-slide li:nth-child(5) label {
-    left: 130px;
-}
-
-.index-slide li:nth-child(6) label {
-    left: 160px;
 }
 
 .index-slide li input:checked ~ img {
@@ -194,7 +157,7 @@
     display: flex;
     flex-direction: column;
     padding: 100px 100px 0px 100px;
-    background-color: #EDEDED;
+    background-color: #171717;
 }
 
 .ingressos-corpo section{
@@ -202,7 +165,7 @@
     flex-direction: column;
     margin-bottom: 100px;
     background-color: #171717;
-    color: #DA0037;
+    color:  #EDEDED;
 }
 
 #ingressos-cartaz{
@@ -321,15 +284,9 @@
 
 #ingressos-agendamento-bloco-agenda div span{
     border-right-style: solid;
-    border-color: #DA0037;
+    border-color:  #EDEDED;
     padding-right: 10px;
     color: #EDEDED;
-}
-
-.btn-agendar{
-    border: #000000;
-    color: #171717;
-    background-color: #DA0037;
 }
 
 /*Pagina Oficinas*/
@@ -337,7 +294,7 @@
     display: flex;
     flex-direction: column;
     padding: 100px 100px 0px 100px;
-    background-color: #EDEDED;
+    background-color:#171717;
 }
 
 .oficinas-corpo h1{
@@ -350,7 +307,7 @@
     padding-bottom: 80px;
     margin-bottom: 100px;
     background-color: #171717;
-    color: #DA0037;
+    color: #EDEDED;
     align-items: center;
 }
 
@@ -374,7 +331,7 @@
     width: 100%;
     border: #000000;
     color: #171717;
-    background-color: #DA0037;
+    background-color: #EDEDED;
 }
 
 .cabecalho-botao{
@@ -388,7 +345,7 @@
     display: flex;
     flex-direction: column;
     padding: 100px 100px 0px 100px;
-    background-color: #EDEDED;
+    background-color: #171717;
 }
 
 .cadastro-corpo h2{
@@ -400,7 +357,7 @@
     flex-direction: column;
     margin-bottom: 100px;
     background-color: #171717;
-    color: #DA0037;
+    color:  #EDEDED;
     align-items: center;
 }
 
@@ -426,7 +383,7 @@
     align-self: center;
     border: #000000;
     color: #171717;
-    background-color: #DA0037;
+    background-color:  #EDEDED;
 }
     .cadastro-corpo section form {
     display: flex;
@@ -443,12 +400,11 @@
   
 /* ---------------------------------------- sobre ---------------------------------------- */
 
-
  .sobre-corpo {
     display: flex;
     flex-direction: column;
     padding: 100px 100px 0px 100px;
-    background-color: #EDEDED;
+    background-color: #171717;
 }
 
 .sobre-corpo h2{
@@ -461,7 +417,7 @@
     padding-bottom: 80px;
     margin-bottom: 100px;
     background-color: #171717;
-    color: #DA0037;
+    color: #EDEDED;
     align-items: center;
 }
 
@@ -498,14 +454,15 @@
   .sobre-corpo section label:not(:first-of-type) {
     margin-top: 1rem;
   }
-  
+
 /* ---------------------------------------- login ---------------------------------------- */
+
 
 .login-corpo {
     display: flex;
     flex-direction: column;
     padding: 100px 100px 0px 100px;
-    background-color: #EDEDED;
+    background-color:#171717;
 }
 
 .login-corpo h2{
@@ -517,7 +474,7 @@
     flex-direction: column;
     margin-bottom: 100px;
     background-color: #171717;
-    color: #DA0037;
+    color:  #EDEDED;
     align-items: center;
 }
 
@@ -543,7 +500,7 @@
     align-self: center;
     border: #000000;
     color: #171717;
-    background-color: #DA0037;
+    background-color:  #EDEDED;;
 }
 .login-corpo section form {
     display: flex;
@@ -572,6 +529,5 @@ footer {
 Cores da paleta:
 #171717 preto
 #444444 cinza
-#DA0037 vermelho
 #EDEDED branco
 */
