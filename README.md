@@ -49,5 +49,18 @@ A Entrega:<br>
 - O projeto deve apresentar um design intuitivo, claro e objetivo, pensando na experiência do usuário.<br>
 <br>
 
+## Sprint IV - Renderização dinâmica e validação de formulários
+
+Desenvolvimento:<br>
+- Manipulação do DOM via JS;<br>
+- Validação de formulário;<br>
+- Renderização dinâmica de elementos em pelo menos uma página.<br>
+
+<br>
+Organização:<br>
+- GitHub;<br>
+- Discord.<br>
+<br>
+
 
 
