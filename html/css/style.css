@@ -393,6 +393,13 @@
   .cadastro-corpo section label:not(:first-of-type) {
     margin-top: 1rem;
   }
+
+  .span-required{
+    display: none;
+    color: #e63636;
+    font-size: 12px;
+    margin: 3px 0 0 1px;
+  }
   
 /* ---------------------------------------- sobre ---------------------------------------- */
 
