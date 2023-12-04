@@ -22,17 +22,28 @@
     padding: 16px;
 }
 
+.cabecalho ul li:hover {
+    background-color: #DA0037;
+}
+
 .cabecalho ul li a {
     text-decoration: none;
     color: #EDEDED;
 }
 
-.cabecalho-botao {
-    background-color: #EDEDED;
-    border: none;
-    padding: 15px 32px;
-    margin-right: 16px;
-    border-radius: 10px;
+.cabecalho ol {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecalho ol li {
+    list-style-type: none;
+    padding: 16px;
+}
+
+.cabecalho ol li a {
+    text-decoration: none;
+    color: #EDEDED;
 }
 
 
@@ -42,115 +53,33 @@
 .index-corpo {
     display: flex;
     flex-direction: column;
-    padding: 100px 100px 0px 100px;
-    background-color:#171717;
-}
-
-.index-corpo section {
     background-color: #171717;
-    margin-bottom: 100px;
-    color: #EDEDED;
 }
 
-.index-corpo section h1 {
+.index-corpo h1 {
     display: flex;
     justify-content: center;
-    padding-top: 10px;
+    color: #DA0037;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 100px;
 }
 
-.index-slide {
-    display: block;
-    height: 295px;
-    width: 60%;
-    margin: auto;
-    margin-top: 20px;
-    position: relative;
-    background-color: #171717;
+#index-filmes a{
+    color: #171717;
 }
 
-.index-slide-li-filmes {
+.carousel-inner{
     display: flex;
-    justify-content: space-between;
-    list-style: none;
-    position: absolute;
+    text-align: center;
 }
 
-.index-slide-li-oficinas{
+.carousel-item{
     display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    position: absolute;   
 }
 
-.index-slide li p {
-    display: flex;
-    width: 70%;
-    text-align: justify;
-    color:#EDEDED;
-    opacity: 0;
-    visibility: hidden;
-    font-size: 0.90em;
-}
+.carousel-item img{
 
-.index-slide img {
-    display: flex;
-    max-width: 100%;
-    height: auto;
-    margin: auto;
-    vertical-align: top;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.index-slide input {
-    display: none;
-}
-
-.index-slide label {
-    background-color: #EDEDED;
-    bottom: 10px;
-    cursor: pointer;
-    display: block;
-    height: 10px;
-    position: relative;
-    width: 10px;
-    z-index: 10;
-}
-
-.index-slide li:nth-child(1) label {
-    left: 10px;
-}
-
-.index-slide li:nth-child(2) label {
-    left: 40px;
-}
-
-.index-slide li:nth-child(3) label {
-    left: 70px;
-}
-
-.index-slide li input:checked ~ img {
-    opacity: 1;
-    visibility: visible;
-    z-index: 10;
-}
-
-.index-slide li input:checked ~ p {
-    opacity: 1;
-    visibility: visible;
-    z-index: 10;
-}
-
-.index-slide li input:checked ~ img {
-    opacity: 1;
-    visibility: visible;
-    z-index: 10;
-}
-
-.index-slide li input:checked ~ p {
-    opacity: 1;
-    visibility: visible;
-    z-index: 10;
 }
 
 /*Pagina Ingressos*/
@@ -166,7 +95,7 @@
     flex-direction: column;
     margin-bottom: 100px;
     background-color: #171717;
-    color:  #EDEDED;
+    color: #DA0037;
 }
 
 #ingressos-cartaz{
@@ -184,6 +113,8 @@
     justify-content: center;
     padding-top: 10px;
     padding: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .ingressos-bloco{
@@ -214,6 +145,10 @@
     margin-top: 10px;
 }
 
+.ingressos-bloco-card-container h4{
+    font-size: 1rem;
+}
+
 .ingressos-card-container-span-black {
     background-color: black;
     padding: 4px;
@@ -231,8 +166,52 @@
 .ingressos-bloco-card-container button {
     background-color: #EDEDED;
     border: none;
+    border-radius: 10px;
     padding: 5px;
     margin-top: 10px;
+}
+
+#ingressos-agendamento{
+    display: flex;
+    justify-content: center;
+
+}
+
+.ingressos-agendamento-bloco{
+    display: flex;
+    justify-content: space-between;
+}
+
+#filmeOprotetor {
+    display: flex;
+}
+
+.ingressos-agendamento-bloco-filmes{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    padding: 20px;
+}
+
+
+.ingressos-agendamento-bloco-filmes img{
+    max-height: 265px;
+    max-width: 180px;
+}
+
+.ingressos-agendamento-bloco-filmes p{
+    text-align: justify;
+    color:#EDEDED;
+    font-size: 0.90em;
+}
+
+.ingressos-agendamento-bloco-agenda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+    max-height: 50%;
+    padding: 10px;
 }
 
 .ingressos-agendamento{
@@ -281,11 +260,16 @@
     background-color: #EDEDED;
     border: none;
     padding: 5px 15px 5px 15px;
+    border-radius: 10%;
+}
+
+#ingressos-agendamento-bloco-agenda div a button:hover{
+    background-color: #DA0037;
 }
 
 #ingressos-agendamento-bloco-agenda div span{
     border-right-style: solid;
-    border-color:  #EDEDED;
+    border-color: #DA0037;
     padding-right: 10px;
     color: #EDEDED;
 }
@@ -300,6 +284,9 @@
 
 .oficinas-corpo h1{
     margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #DA0037;
 }
 
 .oficinas-corpo section{
@@ -320,12 +307,17 @@
     justify-content: space-between;
 }
 
+.oficinas-bloco-card h4{
+    font-size: 1rem;
+}
+
 .oficinas-bloco-card-texto{
     margin-left: 10px;
     text-align: justify;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
+    font-size: 1em;
 }
 
 .btn-agendar-oficinas{
@@ -350,6 +342,7 @@
 }
 
 .cadastro-corpo h2{
+    color: #DA0037;
     margin-top: 10px;
 }
 
@@ -374,6 +367,7 @@
   
   .cadastro-corpo section input {
     padding: .2rem .5rem;
+    border-radius: 10px;
   }
   
   .btn-cadastro {
@@ -411,6 +405,7 @@
 
 .sobre-corpo h2{
     margin-top: 10px;
+    color: #DA0037;
 }
 
 .sobre-corpo section{
@@ -481,6 +476,7 @@
 }
 
 .login-corpo section h2 {
+    color: #DA0037;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
@@ -492,6 +488,7 @@
   
 .login-corpo section input {
     padding: .2rem .5rem;
+    border-radius: 10px;
   }
   
 .btn-login {
@@ -522,7 +519,7 @@
 /* ---------------------------------------- footer ---------------------------------------- */
 footer {
     display: flex;
-    padding: 30px 100px 30px 100px;
+    padding: 30px 15px;
     background-color: #171717;
     color: #EDEDED;
 
