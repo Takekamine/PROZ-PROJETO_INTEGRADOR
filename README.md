@@ -5,7 +5,7 @@ Para tanto, deve ser escolhido um percurso por um tema-problema que favoreça a 
 <br>
 <br>
 
-## Sprint I
+## 🏃‍♂ Sprint I
 
 Feitos layout no Figma, para o nosso <strong>Grupo C</strong>, formado por:<br>
 - Lucas Akamine<br>
@@ -14,7 +14,7 @@ Feitos layout no Figma, para o nosso <strong>Grupo C</strong>, formado por:<br>
 <br>
 <br>
 
-## Sprint II - Telas
+## 🏃‍♂ Sprint II - Telas
 
 Desenvolvimento:<br>
 - Uso das tags HTML no site;<br>
@@ -34,7 +34,7 @@ Projeto com os componentes básicos de um site:<br>
 <br>
 <br>
 
-## Sprint III - Estilos
+## 🏃‍♂ Sprint III - Estilos
 
 Desenvolvimento:<br>
 - Estilização das telas criadas;<br>
@@ -49,7 +49,7 @@ A Entrega:<br>
 - O projeto deve apresentar um design intuitivo, claro e objetivo, pensando na experiência do usuário.<br>
 <br>
 
-## Sprint IV - Renderização dinâmica e validação de formulários
+## 🏃‍♂ Sprint IV - Renderização dinâmica e validação de formulários
 
 Desenvolvimento:<br>
 - Manipulação do DOM via JS;<br>
@@ -62,7 +62,7 @@ Organização:<br>
 - Discord.<br>
 <br>
 
-## Sprint V - Banco de Dados
+## 🏃‍♂ Sprint V - Banco de Dados
 
 Desenvolvimento:<br>
 - Modelar o DER(diagrama de relacionamento) de uma parte do sistema com no mínimo 4 entidades;<br>
