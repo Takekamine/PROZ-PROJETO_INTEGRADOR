@@ -62,5 +62,19 @@ Organização:<br>
 - Discord.<br>
 <br>
 
+## Sprint V - Banco de Dados
+
+Desenvolvimento:<br>
+- Modelar o DER(diagrama de relacionamento) de uma parte do sistema com no mínimo 4 entidades;<br>
+- Criar as tabelas de acordo com as normas 3FN;<br>
+- Realizar consultas simples, se possível, juntando tabelas.<br>
+
+<br>
+Organização:<br>
+- GitHub;<br>
+- Discord;<br>
+- Uso de recursos de apresentação(slides, demonstração de uso do app, etc);<br>
+- Uso do Sql.<br>
+<br>
 
 
