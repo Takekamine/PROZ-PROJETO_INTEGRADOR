@@ -8,6 +8,8 @@ function displayLigaDesliga(elementoHtml){
     }
 }
 
+localStorage.setItem('logado', 'false');
+
 // Ingressos
 const ingressosAgendafilmes = [
     {
@@ -422,9 +424,41 @@ if (mainCadastro) {
 
         localStorage.setItem('usuarioCadastro', JSON.stringify(usuarioCadastro));
 
-        // Exibição no console para fins de depuração
-        console.log('Usuário:', usuarioCadastro);
+        window.location.href = './login.html';
+        
+    });
+}
 
+//Login
+
+let mainLogin = document.querySelector("#login-corpo");
+
+if (mainLogin) {
+    document.getElementById('formularioLogin').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Recuperar valores inseridos no formulário
+        let emailDigitado = document.getElementById('email').value;
+        let senhaDigitada = document.getElementById('senha').value;
+
+        console.log("email:", emailDigitado);
+        console.log("senha:", senhaDigitada);
+
+        // Recuperar valores do localStorage
+        let valoresCadastro = localStorage.getItem('usuarioCadastro');
+        let usuarioCadastro = valoresCadastro ? JSON.parse(valoresCadastro) : null;
+
+        // Comparar os valores
+        if (usuarioCadastro && emailDigitado === usuarioCadastro.email && senhaDigitada === usuarioCadastro.senha) {
+            localStorage.removeItem('logado');
+            localStorage.setItem('logado', 'true');
+
+            window.location.href = './index.html'
+
+        } else {
+            // Falha no login
+            alert('Login falhou. Verifique suas credenciais.');
+        }
     });
 }
 
@@ -469,4 +503,15 @@ if (bodyPerfil) {
             //localStorage.removeItem('agendamentos');
         }
     });
+}
+
+// Cabeçalho
+
+function logout() {
+    // Adicione aqui qualquer lógica de logout necessária, como limpar o localStorage
+    localStorage.removeItem('logado');
+    localStorage.setItem('logado', 'false');
+
+    // Redirecionar para a página atual
+    window.location.href = window.location.href;
 }
