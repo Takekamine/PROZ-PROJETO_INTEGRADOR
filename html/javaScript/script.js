@@ -130,6 +130,7 @@ for (let i = 1; i <= 126; i++) {
 const ingressosAgendamento = document.querySelector("#ingressos-agendamento");
 
 let body = document.querySelector("body");
+let agendamentos = JSON.parse(localStorage.getItem('agendamentos')) || [];
 
 if (body.id == "ingressos"){
     for (let i = 1; i < ingressosAgendafilmes.length; i++){
@@ -327,9 +328,10 @@ if (body.id == "ingressos"){
             if (opcaoSelecionada.length > 0) {
                 opcaoSelecionada.forEach(function(opcaoSelecionada) {
                     let valorSelecionado = opcaoSelecionada.value;
-                    alert('Agendado', valorSelecionado);
-                    // Pode fazer algo mais com o valor, como enviar para o servidor
+                    agendamentos.push(valorSelecionado);
+                    alert('Agendado');
                 });
+                localStorage.setItem('agendamentos', JSON.stringify(agendamentos));
             } else {
                 alert('Nenhuma opção foi selecionada.');
             }
@@ -397,4 +399,27 @@ function senhaValidate2(){
     {
         setError(3);
     }
+}
+
+// Cadastro
+const perfilAgendamento = document.querySelector(".perfil-agendamentos");
+let bodyPerfil = document.querySelector("#perfil-corpo");
+
+if (bodyPerfil) {
+    document.addEventListener('DOMContentLoaded', function() {
+        // Recuperar valores do localStorage
+        let valoresArmazenados = localStorage.getItem('agendamentos');
+
+        if (valoresArmazenados) {
+            let agendamentos = JSON.parse(valoresArmazenados);
+
+            for (let i = 0; i < agendamentos.length; i++) {
+                const perfilAgendamentoFilho = document.createElement("span");
+                perfilAgendamentoFilho.innerText = `${agendamentos[i]}`;
+                perfilAgendamento.appendChild(perfilAgendamentoFilho);
+            }
+            // Limpar os valores do localStorage se desejado
+            //localStorage.removeItem('agendamentos');
+        }
+    });
 }
