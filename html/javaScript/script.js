@@ -95,30 +95,36 @@ const ingressosAgendafilmes = [
 
 const salaExibicao = [
     {
-      id: 0,
+      id_filme: 0,
       sala: "05"
     },
     {
-      id: 1,
+      id_filme: 1,
       sala: "02"
     },
     {
-      id: 2,
+      id_filme: 2,
       sala: "03"
     },
     {
-      id: 3,
+      id_filme: 3,
       sala: "04"
     },
     {
-      id: 4,
+      id_filme: 4,
       sala: "01"
     },
     {
-      id: 5,
+      id_filme: 5,
       sala: "06"
     }
 ]
+
+
+let idSalaHorario = [];
+for (let i = 1; i <= 126; i++) {
+    idSalaHorario.push(i);
+}
 
 
 const ingressosAgendamento = document.querySelector("#ingressos-agendamento");
@@ -139,56 +145,84 @@ if (body.id == "ingressos"){
     
                 <div id="ingressos-agendamento-bloco-agenda">
                     <div class="ingressos-Agenda-tab">
-                        <button class="tab-dia" onclick="dia(event, 'SEG${salaExibicao[i].id}')">13/11<br> SEG</button>
-                        <button class="tab-dia" onclick="dia(event, 'TER${salaExibicao[i].id}')">14/11<br> TER</button>
-                        <button class="tab-dia" onclick="dia(event, 'QUA${salaExibicao[i].id}')">15/11<br> QUA</button>
-                        <button class="tab-dia" onclick="dia(event, 'QUI${salaExibicao[i].id}')">16/11<br> QUI</button>
-                        <button class="tab-dia" onclick="dia(event, 'SEX${salaExibicao[i].id}')">17/11<br> SEX</button>
-                        <button class="tab-dia" onclick="dia(event, 'SAB${salaExibicao[i].id}')">118/11<br> SAB</button>
-                        <button class="tab-dia" onclick="dia(event, 'DOM${salaExibicao[i].id}')">19/11<br> DOM</button>
+                        <button class="tab-dia" onclick="dia(event, 'SEG${salaExibicao[i].id_filme}')">13/11<br> SEG</button>
+                        <button class="tab-dia" onclick="dia(event, 'TER${salaExibicao[i].id_filme}')">14/11<br> TER</button>
+                        <button class="tab-dia" onclick="dia(event, 'QUA${salaExibicao[i].id_filme}')">15/11<br> QUA</button>
+                        <button class="tab-dia" onclick="dia(event, 'QUI${salaExibicao[i].id_filme}')">16/11<br> QUI</button>
+                        <button class="tab-dia" onclick="dia(event, 'SEX${salaExibicao[i].id_filme}')">17/11<br> SEX</button>
+                        <button class="tab-dia" onclick="dia(event, 'SAB${salaExibicao[i].id_filme}')">18/11<br> SAB</button>
+                        <button class="tab-dia" onclick="dia(event, 'DOM${salaExibicao[i].id_filme}')">19/11<br> DOM</button>
                     </div>
-                    <div id="SEG${salaExibicao[i].id}" class="ingressos-Agenda-tabconteudo">
+                    <form id="SEG${salaExibicao[i].id_filme}" class="ingressos-Agenda-tabconteudo" action="">
                         <span>Sala ${salaExibicao[i].sala}</span>
-                        <a>13:30</a>
-                        <a>16:50</a>
-                        <a>20:10</a>
-                    </div>
-                    <div id="TER${salaExibicao[i].id}" class="ingressos-Agenda-tabconteudo">
+                        <input type="radio" id="${idSalaHorario[20*i+i]}" name="horario${salaExibicao[i].id_filme}SEG" value="${ingressosAgendafilmes[i].alt} SEG 13:30 13/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i]}">13:30</label>
+                        <input type="radio" id="${idSalaHorario[20*i+i+1]}" name="horario${salaExibicao[i].id_filme}SEG" value="${ingressosAgendafilmes[i].alt} SEG 16:50 13/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+1]}">16:50</label>
+                        <input type="radio" id="${idSalaHorario[20*i+i+2]}" name="horario${salaExibicao[i].id_filme}SEG" value=" ${ingressosAgendafilmes[i].alt}SEG 20:10 13/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+2]}">20:10</label><br>
+                        <input type="submit" value="Agendar">
+                    </form>
+                    <form id="TER${salaExibicao[i].id_filme}" class="ingressos-Agenda-tabconteudo" action="">
                         <span>Sala ${salaExibicao[i].sala}</span>
-                        <a>13:30</a>
-                        <a>16:50</a>
-                        <a>20:10</a>
-                    </div>
-                    <div id="QUA${salaExibicao[i].id}" class="ingressos-Agenda-tabconteudo">
+                        <input type="radio" id="${idSalaHorario[20*i+i+3]}" name="horario${salaExibicao[i].id_filme}TER" value="${ingressosAgendafilmes[i].alt} TER 13:30 14/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+3]}">13:30</label>
+                        <input type="radio" id="${idSalaHorario[20*i+i+4]}" name="horario${salaExibicao[i].id_filme}TER" value="${ingressosAgendafilmes[i].alt} TER 16:50 14/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+4]}">16:50</label>
+                        <input type="radio" id="${idSalaHorario[20*i+i+5]}" name="horario${salaExibicao[i].id_filme}TER" value="${ingressosAgendafilmes[i].alt} TER 20:10 14/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+5]}">20:10</label><br>
+                        <input type="submit" value="Agendar">
+                    </form>
+                    <form id="QUA${salaExibicao[i].id_filme}" class="ingressos-Agenda-tabconteudo" action="">
                         <span>Sala ${salaExibicao[i].sala}</span>
-                        <a>13:30</a>
-                        <a>16:50</a>
-                        <a>20:10</a>
-                    </div>
-                    <div id="QUI${salaExibicao[i].id}" class="ingressos-Agenda-tabconteudo">
+                        <input type="radio" id="${idSalaHorario[20*i+i+6]}" name="horario${salaExibicao[i].id_filme}QUA" value="${ingressosAgendafilmes[i].alt} TER 13:30 14/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+6]}">13:30</label>
+                        <input type="radio" id="${idSalaHorario[20*i+i+7]}" name="horario${salaExibicao[i].id_filme}QUA" value="${ingressosAgendafilmes[i].alt} TER 16:50 14/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+7]}">16:50</label>
+                        <input type="radio" id="${idSalaHorario[20*i+i+8]}" name="horario${salaExibicao[i].id_filme}QUA" value="${ingressosAgendafilmes[i].alt} TER 20:10 14/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+8]}">20:10</label><br>
+                        <input type="submit" value="Agendar">
+                    </form>
+                    <form id="QUI${salaExibicao[i].id_filme}" class="ingressos-Agenda-tabconteudo" action="">
                         <span>Sala ${salaExibicao[i].sala}</span>
-                        <a>13:30</a>
-                        <a>16:50</a>
-                        <a>20:10</a>
-                    </div>
-                    <div id="SEX${salaExibicao[i].id}" class="ingressos-Agenda-tabconteudo">
+                        <input type="radio" id="${idSalaHorario[20*i+i+9]}" name="horario${salaExibicao[i].id_filme}QUI" value="${ingressosAgendafilmes[i].alt} QUI 13:30 16/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+9]}">13:30</label>
+                        <input type="radio" id="${idSalaHorario[20*i+i+10]}" name="horario${salaExibicao[i].id_filme}QUI" value="${ingressosAgendafilmes[i].alt} QUI 16:50 16/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+10]}">16:50</label>
+                        <input type="radio" id="${idSalaHorario[20*i+i+11]}" name="horario${salaExibicao[i].id_filme}QUI" value="${ingressosAgendafilmes[i].alt} QUI 20:10 16/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+11]}">20:10</label><br>
+                        <input type="submit" value="Agendar">
+                    </form>
+                    <form id="SEX${salaExibicao[i].id_filme}" class="ingressos-Agenda-tabconteudo" action="">
                         <span>Sala ${salaExibicao[i].sala}</span>
-                        <a>13:30</a>
-                        <a>16:50</a>
-                        <a>20:10</a>
-                    </div>
-                    <div id="SAB${salaExibicao[i].id}" class="ingressos-Agenda-tabconteudo">
+                        <input type="radio" id="${idSalaHorario[20*i+i+12]}" name="horario${salaExibicao[i].id_filme}SEX" value="${ingressosAgendafilmes[i].alt} SEX 13:30 17/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+12]}">13:30</label>
+                        <input type="radio" id="${idSalaHorario[20*i+i+13]}" name="horario${salaExibicao[i].id_filme}SEX" value="${ingressosAgendafilmes[i].alt} SEX 16:50 17/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+13]}">16:50</label>
+                        <input type="radio" id="${idSalaHorario[20*i+i+14]}" name="horario${salaExibicao[i].id_filme}SEX" value="${ingressosAgendafilmes[i].alt} SEX 20:10 17/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+14]}">20:10</label><br>
+                        <input type="submit" value="Agendar">
+                    </form>
+                    <form id="SAB${salaExibicao[i].id_filme}" class="ingressos-Agenda-tabconteudo" action="">
                         <span>Sala ${salaExibicao[i].sala}</span>
-                        <a>13:30</a>
-                        <a>16:50</a>
-                        <a>20:10</a>
-                    </div>
-                    <div id="DOM${salaExibicao[i].id}" class="ingressos-Agenda-tabconteudo">
+                        <input type="radio" id="${idSalaHorario[20*i+i+15]}" name="horario${salaExibicao[i].id_filme}SAB" value="${ingressosAgendafilmes[i].alt} SAB 13:30 18/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+15]}">13:30</label>
+                        <input type="radio" id="${idSalaHorario[20*i+i+16]}" name="horario${salaExibicao[i].id_filme}SAB" value="${ingressosAgendafilmes[i].alt} SAB 16:50 18/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+16]}">16:50</label>
+                        <input type="radio" id="${idSalaHorario[20*i+i+17]}" name="horario${salaExibicao[i].id_filme}SAB" value="${ingressosAgendafilmes[i].alt} SAB 20:10 18/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+17]}">20:10</label><br>
+                        <input type="submit" value="Agendar">
+                    </form>
+                    <form id="DOM${salaExibicao[i].id_filme}" class="ingressos-Agenda-tabconteudo" action="">
                         <span>Sala ${salaExibicao[i].sala}</span>
-                        <a>13:30</a>
-                        <a>16:50</a>
-                        <a>20:10</a>
-                    </div>                 
+                        <input type="radio" id="${idSalaHorario[20*i+i+18]}" name="horario${salaExibicao[i].id_filme}DOM" value="${ingressosAgendafilmes[i].alt} DOM 13:30 19/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+18]}">13:30</label>
+                        <input type="radio" id="${idSalaHorario[20*i+i+19]}" name="horario${salaExibicao[i].id_filme}DOM" value="${ingressosAgendafilmes[i].alt} DOM 16:50 19/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+19]}">16:50</label>
+                        <input type="radio" id="${idSalaHorario[20*i+i+20]}" name="horario${salaExibicao[i].id_filme}DOM" value="${ingressosAgendafilmes[i].alt} DOM 20:10 19/11 sala ${salaExibicao[i].sala}">
+                        <label for="${idSalaHorario[20*i+i+20]}">20:10</label><br>
+                        <input type="submit" value="Agendar">
+                    </form>
                 </div>
             </div>
             `
@@ -272,11 +306,36 @@ if (body.id == "ingressos"){
             tabDia[i].className = tabDia[i].className.replace(" active", "");
         }
       
-        // Show the current tab, and add an "active" class to the button that opened the tab
         document.getElementById(dia).style.display = "block";
         evt.currentTarget.className += " active";
-      }
 
+        let removeRadio = document.querySelectorAll('input[type="radio"]');
+        removeRadio.forEach(function(removeRadio) {
+            removeRadio.checked = false;
+        });
+
+    }
+
+    let btnSubmit = document.querySelectorAll('input[type="submit"][value="Agendar"]');
+
+    btnSubmit.forEach(function(btnSubmit) {
+        btnSubmit.addEventListener('click', (e) => {
+            e.preventDefault();
+            let opcaoSelecionada = document.querySelectorAll('input[type="radio"]:checked');
+            
+            // Verificar se pelo menos uma opção foi selecionada
+            if (opcaoSelecionada.length > 0) {
+                opcaoSelecionada.forEach(function(opcaoSelecionada) {
+                    let valorSelecionado = opcaoSelecionada.value;
+                    alert('Agendado', valorSelecionado);
+                    // Pode fazer algo mais com o valor, como enviar para o servidor
+                });
+            } else {
+                alert('Nenhuma opção foi selecionada.');
+            }
+        });
+    });
+    
 }
 
 // Cadastro

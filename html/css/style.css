@@ -272,14 +272,15 @@
     color: #EDEDED;
 }
 
-.ingressos-Agenda-tabconteudo a{
+.ingressos-Agenda-tabconteudo label{
     border: solid;
     border-color: #DA0037;
     padding: 5px;
 }
 
-.ingressos-Agenda-tabconteudo a:hover{
-    background-color: #444444;
+.ingressos-Agenda-tabconteudo input[type="submit"]{
+    border-radius: 10px;
+    padding: 3px;
 }
 
 /*Pagina Oficinas*/
