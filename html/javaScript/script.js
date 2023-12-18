@@ -93,109 +93,249 @@ const ingressosAgendafilmes = [
     }
 ]
 
+const salaExibicao = [
+    {
+      id: 0,
+      sala: "05"
+    },
+    {
+      id: 1,
+      sala: "02"
+    },
+    {
+      id: 2,
+      sala: "03"
+    },
+    {
+      id: 3,
+      sala: "04"
+    },
+    {
+      id: 4,
+      sala: "01"
+    },
+    {
+      id: 5,
+      sala: "06"
+    }
+]
+
+
 const ingressosAgendamento = document.querySelector("#ingressos-agendamento");
 
+let body = document.querySelector("body");
 
-for (let i = 1; i < ingressosAgendafilmes.length; i++){
+if (body.id == "ingressos"){
+    for (let i = 1; i < ingressosAgendafilmes.length; i++){
 
-    const ingressosAgendamentoBloco = document.createElement("div");
-
-    ingressosAgendamentoBloco.innerHTML = `
-        <div class="ingressos-agendamento-bloco" id="${ingressosAgendafilmes[i].id}">                        
-            <div class="ingressos-agendamento-bloco-filmes">
-                <img src="${ingressosAgendafilmes[i].img}" alt="${ingressosAgendafilmes[i].alt}">
-                <p>${ingressosAgendafilmes[i].sinopse}</p>
-            </div>
-
-            <div id="ingressos-agendamento-bloco-agenda">
-                <div>
-                    <a href="#ingressos-agendamento">
-                        <button>13/11<br> SEG</button>
-                    </a>
-                    <a href="#ingressos-agendamento">
-                        <button>14/11<br> TER</button>
-                    </a>
-                    <a href="#ingressos-agendamento">
-                        <button>15/11<br> QUA</button>
-                    </a>
-                    <a href="#ingressos-agendamento">
-                        <button>16/11<br> QUI</button>
-                    </a>
-                    <a href="#ingressos-agendamento">
-                        <button>17/11<br> SEX</button>
-                    </a>
-                    <a href="#ingressos-agendamento">
-                        <button>118/11<br> SAB</button>
-                    </a>
-                    <a href="#ingressos-agendamento">
-                        <button>19/11<br> DOM</button>
-                    </a>
+        const ingressosAgendamentoBloco = document.createElement("div");
+    
+        ingressosAgendamentoBloco.innerHTML = `
+            <div class="ingressos-agendamento-bloco" id="${ingressosAgendafilmes[i].id}">                        
+                <div class="ingressos-agendamento-bloco-filmes">
+                    <img src="${ingressosAgendafilmes[i].img}" alt="${ingressosAgendafilmes[i].alt}">
+                    <p>${ingressosAgendafilmes[i].sinopse}</p>
                 </div>
-                <div>
-                    <span>Sala 05</span>
-                    <span>13:30</span>
-                    <span>16:50</span>
-                    <span>20:10</span>
+    
+                <div id="ingressos-agendamento-bloco-agenda">
+                    <div class="ingressos-Agenda-tab">
+                        <button class="tab-dia" onclick="dia(event, 'SEG${salaExibicao[i].id}')">13/11<br> SEG</button>
+                        <button class="tab-dia" onclick="dia(event, 'TER${salaExibicao[i].id}')">14/11<br> TER</button>
+                        <button class="tab-dia" onclick="dia(event, 'QUA${salaExibicao[i].id}')">15/11<br> QUA</button>
+                        <button class="tab-dia" onclick="dia(event, 'QUI${salaExibicao[i].id}')">16/11<br> QUI</button>
+                        <button class="tab-dia" onclick="dia(event, 'SEX${salaExibicao[i].id}')">17/11<br> SEX</button>
+                        <button class="tab-dia" onclick="dia(event, 'SAB${salaExibicao[i].id}')">118/11<br> SAB</button>
+                        <button class="tab-dia" onclick="dia(event, 'DOM${salaExibicao[i].id}')">19/11<br> DOM</button>
+                    </div>
+                    <div id="SEG${salaExibicao[i].id}" class="ingressos-Agenda-tabconteudo">
+                        <span>Sala ${salaExibicao[i].sala}</span>
+                        <a>13:30</a>
+                        <a>16:50</a>
+                        <a>20:10</a>
+                    </div>
+                    <div id="TER${salaExibicao[i].id}" class="ingressos-Agenda-tabconteudo">
+                        <span>Sala ${salaExibicao[i].sala}</span>
+                        <a>13:30</a>
+                        <a>16:50</a>
+                        <a>20:10</a>
+                    </div>
+                    <div id="QUA${salaExibicao[i].id}" class="ingressos-Agenda-tabconteudo">
+                        <span>Sala ${salaExibicao[i].sala}</span>
+                        <a>13:30</a>
+                        <a>16:50</a>
+                        <a>20:10</a>
+                    </div>
+                    <div id="QUI${salaExibicao[i].id}" class="ingressos-Agenda-tabconteudo">
+                        <span>Sala ${salaExibicao[i].sala}</span>
+                        <a>13:30</a>
+                        <a>16:50</a>
+                        <a>20:10</a>
+                    </div>
+                    <div id="SEX${salaExibicao[i].id}" class="ingressos-Agenda-tabconteudo">
+                        <span>Sala ${salaExibicao[i].sala}</span>
+                        <a>13:30</a>
+                        <a>16:50</a>
+                        <a>20:10</a>
+                    </div>
+                    <div id="SAB${salaExibicao[i].id}" class="ingressos-Agenda-tabconteudo">
+                        <span>Sala ${salaExibicao[i].sala}</span>
+                        <a>13:30</a>
+                        <a>16:50</a>
+                        <a>20:10</a>
+                    </div>
+                    <div id="DOM${salaExibicao[i].id}" class="ingressos-Agenda-tabconteudo">
+                        <span>Sala ${salaExibicao[i].sala}</span>
+                        <a>13:30</a>
+                        <a>16:50</a>
+                        <a>20:10</a>
+                    </div>                 
                 </div>
             </div>
-        </div>
-        `
+            `
+    
+        ingressosAgendamento.appendChild(ingressosAgendamentoBloco);
+    
+        let ingressosAgendamentoBlocoId = document.querySelector("#" + ingressosAgendafilmes[i].id);
+        displayLigaDesliga(ingressosAgendamentoBlocoId);
+    }
 
-    ingressosAgendamento.appendChild(ingressosAgendamentoBloco);
+    let botaoIngressosOprotetor = document.querySelector("#ingressos-cartaz-oProtetor");
+    let botaoIngressosjogosMortais = document.querySelector("#ingressos-cartaz-jogosMortais");
+    let botaoIngressosNossoSonho = document.querySelector("#ingressos-cartaz-nossoSonho");
+    let botaoIngressosBarbie = document.querySelector("#ingressos-cartaz-barbie");
+    let botaoIngressosBesouroAzul = document.querySelector("#ingressos-cartaz-besouroAzul");
+    let botaoIngressosSomDaLiberdade = document.querySelector("#ingressos-cartaz-somDaLiberdade");
 
-    let ingressosAgendamentoBlocoId = document.querySelector("#" + ingressosAgendafilmes[i].id);
-    displayLigaDesliga(ingressosAgendamentoBlocoId);
+    let ingressosAgendamentoBlocoVisivel = document.querySelector("#filmeOprotetor");
+
+
+    botaoIngressosOprotetor.addEventListener("click", (e)=> {
+        displayLigaDesliga(ingressosAgendamentoBlocoVisivel);
+        let visualizarAgendar = document.querySelector("#" + ingressosAgendafilmes[0].id);
+        displayLigaDesliga(visualizarAgendar);
+        ingressosAgendamentoBlocoVisivel = visualizarAgendar;
+    });
+
+    botaoIngressosjogosMortais.addEventListener("click", (e)=> {
+        displayLigaDesliga(ingressosAgendamentoBlocoVisivel);
+        let visualizarAgendar = document.querySelector("#" + ingressosAgendafilmes[1].id);
+        displayLigaDesliga(visualizarAgendar);
+        ingressosAgendamentoBlocoVisivel = visualizarAgendar;
+    });
+
+    botaoIngressosNossoSonho.addEventListener("click", (e)=> {
+        displayLigaDesliga(ingressosAgendamentoBlocoVisivel);
+        let visualizarAgendar = document.querySelector("#" + ingressosAgendafilmes[2].id);
+        displayLigaDesliga(visualizarAgendar);
+        ingressosAgendamentoBlocoVisivel = visualizarAgendar;
+    });
+
+    botaoIngressosBarbie.addEventListener("click", (e)=> {
+        displayLigaDesliga(ingressosAgendamentoBlocoVisivel);
+        let visualizarAgendar = document.querySelector("#" + ingressosAgendafilmes[3].id);
+        displayLigaDesliga(visualizarAgendar);
+        ingressosAgendamentoBlocoVisivel = visualizarAgendar;
+    });
+
+    botaoIngressosBesouroAzul.addEventListener("click", (e)=> {
+        displayLigaDesliga(ingressosAgendamentoBlocoVisivel);
+        let visualizarAgendar = document.querySelector("#" + ingressosAgendafilmes[4].id);
+        displayLigaDesliga(visualizarAgendar);
+        ingressosAgendamentoBlocoVisivel = visualizarAgendar;
+    });
+
+    botaoIngressosSomDaLiberdade.addEventListener("click", (e)=> {
+        displayLigaDesliga(ingressosAgendamentoBlocoVisivel);
+        let visualizarAgendar = document.querySelector("#" + ingressosAgendafilmes[5].id);
+        displayLigaDesliga(visualizarAgendar);
+        ingressosAgendamentoBlocoVisivel = visualizarAgendar;
+    });
+
+    let i, tabconteudo, tabDia;
+      
+    tabconteudo = document.getElementsByClassName("ingressos-Agenda-tabconteudo");
+    for (i = 0; i < tabconteudo.length; i++) {
+            tabconteudo[i].style.display = "none";
+    }
+    
+    function dia(evt, dia) {
+
+        let i, tabconteudo, tabDia;
+      
+        tabconteudo = document.getElementsByClassName("ingressos-Agenda-tabconteudo");
+        for (i = 0; i < tabconteudo.length; i++) {
+            tabconteudo[i].style.display = "none";
+        }
+
+        tabDia = document.getElementsByClassName("tab-dia");
+        for (i = 0; i < tabDia.length; i++) {
+            tabDia[i].className = tabDia[i].className.replace(" active", "");
+        }
+      
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(dia).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
 }
 
+// Cadastro
 
-let botaoIngressosOprotetor = document.querySelector("#ingressos-cartaz-oProtetor");
-let botaoIngressosjogosMortais = document.querySelector("#ingressos-cartaz-jogosMortais");
-let botaoIngressosNossoSonho = document.querySelector("#ingressos-cartaz-nossoSonho");
-let botaoIngressosBarbie = document.querySelector("#ingressos-cartaz-barbie");
-let botaoIngressosBesouroAzul = document.querySelector("#ingressos-cartaz-besouroAzul");
-let botaoIngressosSomDaLiberdade = document.querySelector("#ingressos-cartaz-somDaLiberdade");
+const form = document.getElementById('form')
+const campos = document.querySelectorAll('.required')
+const spans = document.querySelectorAll('.span-required')
+const emailRegex = /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/
 
-let ingressosAgendamentoBlocoVisivel = document.querySelector("#filmeOprotetor");
+function setError(index){
+    campos[index].style.border = '4px solid #e63636'
+    spans[index].style.display='block'
+}
 
+function removeError(index){
+    campos[index].style.border = '4px solid #4ba375'
+    spans[index].style.display='none'
+}
+function nameValidate(){
+    if(campos[0].value.length<3)
+    {
+        setError(0);
+    }
+    else
+    {
+        removeError(0);
+    }
+}
 
-botaoIngressosOprotetor.addEventListener("click", (e)=> {
-    displayLigaDesliga(ingressosAgendamentoBlocoVisivel);
-    let visualizarAgendar = document.querySelector("#" + ingressosAgendafilmes[0].id);
-    displayLigaDesliga(visualizarAgendar);
-    ingressosAgendamentoBlocoVisivel = visualizarAgendar;
-});
+function emailValidate(){
+    if(!emailRegex.test(campos[1].value))
+    {
+        setError(1);
+    }
+    else
+    {
+        removeError(1);
+    }
+}
 
-botaoIngressosjogosMortais.addEventListener("click", (e)=> {
-    displayLigaDesliga(ingressosAgendamentoBlocoVisivel);
-    let visualizarAgendar = document.querySelector("#" + ingressosAgendafilmes[1].id);
-    displayLigaDesliga(visualizarAgendar);
-    ingressosAgendamentoBlocoVisivel = visualizarAgendar;
-});
+function senhaValidate(){
+    if(campos[2].value.length<6)
+    {
+        setError(2);
+    }
+    else
+    {
+        removeError(2);
+        senhaValidate2();
+    }
+}
 
-botaoIngressosNossoSonho.addEventListener("click", (e)=> {
-    displayLigaDesliga(ingressosAgendamentoBlocoVisivel);
-    let visualizarAgendar = document.querySelector("#" + ingressosAgendafilmes[2].id);
-    displayLigaDesliga(visualizarAgendar);
-    ingressosAgendamentoBlocoVisivel = visualizarAgendar;
-});
-
-botaoIngressosBarbie.addEventListener("click", (e)=> {
-    displayLigaDesliga(ingressosAgendamentoBlocoVisivel);
-    let visualizarAgendar = document.querySelector("#" + ingressosAgendafilmes[3].id);
-    displayLigaDesliga(visualizarAgendar);
-    ingressosAgendamentoBlocoVisivel = visualizarAgendar;
-});
-
-botaoIngressosBesouroAzul.addEventListener("click", (e)=> {
-    displayLigaDesliga(ingressosAgendamentoBlocoVisivel);
-    let visualizarAgendar = document.querySelector("#" + ingressosAgendafilmes[4].id);
-    displayLigaDesliga(visualizarAgendar);
-    ingressosAgendamentoBlocoVisivel = visualizarAgendar;
-});
-
-botaoIngressosSomDaLiberdade.addEventListener("click", (e)=> {
-    displayLigaDesliga(ingressosAgendamentoBlocoVisivel);
-    let visualizarAgendar = document.querySelector("#" + ingressosAgendafilmes[5].id);
-    displayLigaDesliga(visualizarAgendar);
-    ingressosAgendamentoBlocoVisivel = visualizarAgendar;
-});
+function senhaValidate2(){
+    if(campos[2].value == campos[3].value && campos[3].value.length>=6)
+    {
+        removeError(3);
+    }
+    else
+    {
+        setError(3);
+    }
+}

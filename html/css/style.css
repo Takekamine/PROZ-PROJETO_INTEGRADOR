@@ -252,26 +252,34 @@
     padding: 10px;
 }
 
-#ingressos-agendamento-bloco-agenda div{
+.ingressos-Agenda-tab{
     padding: 10px;
 }
 
-#ingressos-agendamento-bloco-agenda div a button{
+.ingressos-Agenda-tab button{
     background-color: #EDEDED;
     border: none;
     padding: 5px 15px 5px 15px;
     border-radius: 10%;
 }
 
-#ingressos-agendamento-bloco-agenda div a button:hover{
+.ingressos-Agenda-tab button:hover{
     background-color: #DA0037;
 }
 
-#ingressos-agendamento-bloco-agenda div span{
-    border-right-style: solid;
-    border-color: #DA0037;
-    padding-right: 10px;
+.ingressos-Agenda-tabconteudo{
+    padding: 10px 0px 0px 11px;
     color: #EDEDED;
+}
+
+.ingressos-Agenda-tabconteudo a{
+    border: solid;
+    border-color: #DA0037;
+    padding: 5px;
+}
+
+.ingressos-Agenda-tabconteudo a:hover{
+    background-color: #444444;
 }
 
 /*Pagina Oficinas*/
@@ -527,9 +535,20 @@
 footer {
     display: flex;
     padding: 30px 15px;
-    background-color: #171717;
-    color: #EDEDED;
+    background-color: #444444;
+    color: #171717;
+    font-weight: bold;
+    padding-top: 50px;
+}
 
+footer address {
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
 }
 
 /*

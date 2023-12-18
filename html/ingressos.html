@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>    
+<body id="ingressos">    
     <header class="cabecalho">
         <img src="./img/Cine Oficina Preto.png" width=200 lenght="200" alt="Logo">
         <nav>
@@ -164,34 +164,56 @@
                 </div>
 
                 <div id="ingressos-agendamento-bloco-agenda">
-                    <div>
-                        <a href="#ingressos-agendamento">
-                            <button>13/11<br> SEG</button>
-                        </a>
-                        <a href="#ingressos-agendamento">
-                            <button>14/11<br> TER</button>
-                        </a>
-                        <a href="#ingressos-agendamento">
-                            <button>15/11<br> QUA</button>
-                        </a>
-                        <a href="#ingressos-agendamento">
-                            <button>16/11<br> QUI</button>
-                        </a>
-                        <a href="#ingressos-agendamento">
-                            <button>17/11<br> SEX</button>
-                        </a>
-                        <a href="#ingressos-agendamento">
-                            <button>118/11<br> SAB</button>
-                        </a>
-                        <a href="#ingressos-agendamento">
-                            <button>19/11<br> DOM</button>
-                        </a>
+                    <div class="ingressos-Agenda-tab">
+                        <button class="tab-dia" onclick="dia(event, 'SEG0')">13/11<br> SEG</button>
+                        <button class="tab-dia" onclick="dia(event, 'TER0')">14/11<br> TER</button>
+                        <button class="tab-dia" onclick="dia(event, 'QUA0')">15/11<br> QUA</button>
+                        <button class="tab-dia" onclick="dia(event, 'QUI0')">16/11<br> QUI</button>
+                        <button class="tab-dia" onclick="dia(event, 'SEX0')">17/11<br> SEX</button>
+                        <button class="tab-dia" onclick="dia(event, 'SAB0')">118/11<br> SAB</button>
+                        <button class="tab-dia" onclick="dia(event, 'DOM0')">19/11<br> DOM</button>
                     </div>
-                    <div>
+                    <div id="SEG0" class="ingressos-Agenda-tabconteudo">
                         <span>Sala 05</span>
-                        <span>13:30</span>
-                        <span>16:50</span>
-                        <span>20:10</span>
+                        <a>13:30</a>
+                        <a>16:50</a>
+                        <a>20:10</a>
+                    </div>
+                    <div id="TER0" class="ingressos-Agenda-tabconteudo">
+                        <span>Sala 05</span>
+                        <a>13:30</a>
+                        <a>16:50</a>
+                        <a>20:10</a>
+                    </div>
+                    <div id="QUA0" class="ingressos-Agenda-tabconteudo">
+                        <span>Sala 05</span>
+                        <a>13:30</a>
+                        <a>16:50</a>
+                        <a>20:10</a>
+                    </div>
+                    <div id="QUI0" class="ingressos-Agenda-tabconteudo">
+                        <span>Sala 05</span>
+                        <a>13:30</a>
+                        <a>16:50</a>
+                        <a>20:10</a>
+                    </div>
+                    <div id="SEX0" class="ingressos-Agenda-tabconteudo">
+                        <span>Sala 05</span>
+                        <a>13:30</a>
+                        <a>16:50</a>
+                        <a>20:10</a>
+                    </div>
+                    <div id="SAB0" class="ingressos-Agenda-tabconteudo">
+                        <span>Sala 05</span>
+                        <a>13:30</a>
+                        <a>16:50</a>
+                        <a>20:10</a>
+                    </div>
+                    <div id="DOM0" class="ingressos-Agenda-tabconteudo">
+                        <span>Sala 05</span>
+                        <a>13:30</a>
+                        <a>16:50</a>
+                        <a>20:10</a>
                     </div>
                 </div>
             </div>
@@ -204,6 +226,7 @@
             Bela Vista, São Paulo - SP, 01311-300<br>
             Tel: 9999 - 9999
         </address>
+        <p>&copy; 2023 - Cine Oficina</p>
     </footer>
     
 </body>
