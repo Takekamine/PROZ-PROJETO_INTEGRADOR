@@ -401,7 +401,34 @@ function senhaValidate2(){
     }
 }
 
-// Cadastro
+let mainCadastro = document.querySelector("#cadastro-corpo");
+
+if (mainCadastro) {
+    
+    document.getElementById('formularioCadastro').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        let nome = document.getElementById('nome').value;
+        let email = document.getElementById('email').value;
+        let senha = document.getElementById('senha').value;
+        let confSenha = document.getElementById('Confsenha').value;
+
+        let usuarioCadastro = {
+            nome: nome,
+            email: email,
+            senha: senha,
+            confSenha: confSenha
+        };
+
+        localStorage.setItem('usuarioCadastro', JSON.stringify(usuarioCadastro));
+
+        // Exibição no console para fins de depuração
+        console.log('Usuário:', usuarioCadastro);
+
+    });
+}
+
+// Perfil
 const perfilAgendamento = document.querySelector(".perfil-agendamentos");
 let bodyPerfil = document.querySelector("#perfil-corpo");
 
@@ -409,6 +436,26 @@ if (bodyPerfil) {
     document.addEventListener('DOMContentLoaded', function() {
         // Recuperar valores do localStorage
         let valoresArmazenados = localStorage.getItem('agendamentos');
+        let valoresCadastro = localStorage.getItem('usuarioCadastro');
+
+        let usuarioCadastro = valoresCadastro ? JSON.parse(valoresCadastro) : null;
+
+        const nomePerfilPai = document.getElementById("nomePerfil");
+        const emailPerfilPai = document.getElementById("emailPerfil");
+
+        const nomePerfilFilho = document.createElement("p");
+        const emailPerfilFilho = document.createElement("p");
+
+        console.log(usuarioCadastro.nome);
+        console.log(usuarioCadastro.email);
+        
+        nomePerfilFilho.innerText = `${usuarioCadastro.nome}`;
+        emailPerfilFilho.innerText = `${usuarioCadastro.email}`;
+        
+        nomePerfilPai.appendChild(nomePerfilFilho);
+        emailPerfilPai.appendChild(emailPerfilFilho);
+
+
 
         if (valoresArmazenados) {
             let agendamentos = JSON.parse(valoresArmazenados);
