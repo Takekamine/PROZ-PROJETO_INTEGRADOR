@@ -8,7 +8,6 @@ function displayLigaDesliga(elementoHtml){
     }
 }
 
-localStorage.setItem('logado', 'false');
 
 // Ingressos
 const ingressosAgendafilmes = [
@@ -324,6 +323,12 @@ if (body.id == "ingressos"){
     btnSubmit.forEach(function(btnSubmit) {
         btnSubmit.addEventListener('click', (e) => {
             e.preventDefault();
+
+            if (localStorage.getItem('logado') !== 'true') {
+                alert('Você precisa estar logado para agendar.');
+                return; // Impede que o restante do código seja executado
+            }
+
             let opcaoSelecionada = document.querySelectorAll('input[type="radio"]:checked');
             
             // Verificar se pelo menos uma opção foi selecionada
@@ -341,6 +346,7 @@ if (body.id == "ingressos"){
     });
     
 }
+
 
 // Cadastro
 
@@ -430,37 +436,58 @@ if (mainCadastro) {
 }
 
 //Login
+function verificarEstadoLogin() {
+    let estaLogado = localStorage.getItem('logado') === 'true';
+    let navOn = document.getElementById('on');
+    let navOff = document.getElementById('off');
 
-let mainLogin = document.querySelector("#login-corpo");
-
-if (mainLogin) {
-    document.getElementById('formularioLogin').addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        // Recuperar valores inseridos no formulário
-        let emailDigitado = document.getElementById('email').value;
-        let senhaDigitada = document.getElementById('senha').value;
-
-        console.log("email:", emailDigitado);
-        console.log("senha:", senhaDigitada);
-
-        // Recuperar valores do localStorage
-        let valoresCadastro = localStorage.getItem('usuarioCadastro');
-        let usuarioCadastro = valoresCadastro ? JSON.parse(valoresCadastro) : null;
-
-        // Comparar os valores
-        if (usuarioCadastro && emailDigitado === usuarioCadastro.email && senhaDigitada === usuarioCadastro.senha) {
-            localStorage.removeItem('logado');
-            localStorage.setItem('logado', 'true');
-
-            window.location.href = './index.html'
-
-        } else {
-            // Falha no login
-            alert('Login falhou. Verifique suas credenciais.');
-        }
-    });
+    if (estaLogado) {
+        navOn.style.display = 'block';
+        navOff.style.display = 'none';
+    } else {
+        navOn.style.display = 'none';
+        navOff.style.display = 'block';
+    }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    verificarEstadoLogin();
+
+    // Adicionar evento de submissão do formulário
+    let mainLogin = document.querySelector("#login-corpo");
+
+    if (mainLogin) {
+        document.getElementById('formularioLogin').addEventListener('submit', function (event) {
+            event.preventDefault();
+    
+            // Recuperar valores inseridos no formulário
+            let emailDigitado = document.getElementById('email').value;
+            let senhaDigitada = document.getElementById('senha').value;
+    
+            console.log("email:", emailDigitado);
+            console.log("senha:", senhaDigitada);
+    
+            // Recuperar valores do localStorage
+            let valoresCadastro = localStorage.getItem('usuarioCadastro');
+            let usuarioCadastro = valoresCadastro ? JSON.parse(valoresCadastro) : null;
+    
+            // Comparar os valores
+            if (usuarioCadastro && emailDigitado === usuarioCadastro.email && senhaDigitada === usuarioCadastro.senha) {
+                localStorage.removeItem('logado');
+                localStorage.setItem('logado', 'true');
+    
+                window.location.href = './index.html'
+    
+            } else {
+                // Falha no login
+                alert('Login falhou. Verifique suas credenciais.');
+            }
+            verificarEstadoLogin();
+        });
+    }
+});
+
+
 
 // Perfil
 const perfilAgendamento = document.querySelector(".perfil-agendamentos");
@@ -509,8 +536,7 @@ if (bodyPerfil) {
 
 function logout() {
     // Adicione aqui qualquer lógica de logout necessária, como limpar o localStorage
-    localStorage.removeItem('logado');
-    localStorage.setItem('logado', 'false');
+    localStorage.clear();
 
     // Redirecionar para a página atual
     window.location.href = window.location.href;
