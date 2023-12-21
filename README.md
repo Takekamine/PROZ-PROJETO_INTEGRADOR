@@ -1,3 +1,10 @@
+## ENTREGA FINAL GITHUB PAGES
+
+https://takekamine.github.io/Pages-projeto-integrador/index.html
+
+<br>
+<br>
+
 # PROZ-PROJETO_INTEGRADOR
 
 São atividades grupais e de classe, em relação às diferentes habilidades e conceitos que são aprendidos ao longo do curso.<br>
@@ -76,5 +83,3 @@ Organização:<br>
 - Uso de recursos de apresentação(slides, demonstração de uso do app, etc);<br>
 - Uso do Sql.<br>
 <br>
-
-
