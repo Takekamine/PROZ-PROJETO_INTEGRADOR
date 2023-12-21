@@ -1,7 +1,8 @@
 ## ENTREGA FINAL GITHUB PAGES
-
 https://takekamine.github.io/Pages-projeto-integrador/index.html
-
+<br>
+## ENTREGA FINAL Powerpoint
+https://1drv.ms/p/s!AttiLoc_14JigbQEonCKzHwUAt90MQ?e=7pgJ5J
 <br>
 <br>
 
